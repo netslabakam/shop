@@ -1,0 +1,67 @@
+ShopMain:
+  shop_item_phone:
+    ShopCategory: phone
+    city:     Fergana
+    type:     samsung
+    item_name:    galaxy-s5
+    img:          blabla.img
+    location:     ul. yassoviy
+    description:  |
+        prodam telefon i blaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in.
+    token:        shop_item
+    is_activated: true
+    email:        ya.on-line@bk.ru
+    phone:        +998905441008
+    expires_at:   '2018-11-22'
+
+  shop_item_computer:
+    ShopCategory: computer
+    city:     Fergana
+    type:     samsung
+    item_name:    galaxy-s5
+    img:          blabla.img
+    location:     ul. yassoviy
+    description:  |
+      prodam telefon i blaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+      enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in.
+    token:        shop_item2
+    is_activated: true
+    email:        ya.on-line@bk.ru
+    phone:        +998905441008
+    expires_at:   '2018-11-22'
+
+  expired_item:
+    ShopCategory: other
+    city:     andijan
+    type:     samsung
+    item_name:    galaxy-s5
+    img:          blabla.img
+    location:     ul. yassoviy
+    description:  |
+      asdasdasasdasd
+    token:        shop_item23
+    is_activated: true
+    email:        ya.on-line@bk.ru
+    phone:        +998905441008
+    created_at:   '2018-10-22'
+
+<?php for ($i = 100; $i <= 130; $i++): ?>
+  shop_<?php echo $i ?>:
+    ShopCategory: computer
+    city:      Company <?php echo $i."\n" ?>
+    type:     Web Developer
+    item_name:     Paris, France
+    location:     ul.yassoviy
+    description:  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    is_activated: true
+    token:        shop_<?php echo $i."\n" ?>
+    email:        job@example.com
+
+<?php endfor; ?>

@@ -1,0 +1,47 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ShopMain
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          shop_main
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        is_activated: { label: Activated?, help: Whether the user has activated the item, or not }
+      list:
+        title: Category Phone
+        layout:  stacked
+        display: [item_name, city, location, type, is_activated, email]
+        params:  |
+          %%is_activated%% <small>%%shop_category%%</small> - %%type%%
+           (<em>%%email%%</em>) is looking for a %%=item_name%% (%%location%%)
+        sort: [expires_at, desc]
+        max_per_page: 10
+        batch_actions:
+          _delete:    ~
+          extend:     ~
+        object_actions:
+          extend:     ~
+          _edit:      ~
+          _delete:    ~
+        actions:
+          deleteNeverActivated: { label: Delete never activated jobs }
+        table_method: retrieveBackendShopList
+      filter:
+        display: [category_id, city, description, is_activated, phone, email, expires_at]
+      form:
+        display:
+          Content: [category_id, type, city, img, location, description, phone, email]
+          Admin:   [_generated_token, is_activated, expires_at]
+        class: BackendShopMainForm
+      edit:
+        title: Editing item "%%type%% is looking for a %%type%%"
+      new:
+        title: Shop creation

@@ -1,0 +1,6 @@
+User:
+  user:
+    UserCategory: user
+    name: http://www.sensio-labs.com/
+    email: fabien.potencier@example.com
+    token: sensio_labs

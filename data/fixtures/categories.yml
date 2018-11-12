@@ -1,0 +1,9 @@
+ShopCategory:
+  phone:
+    name: phones
+  computer:
+    name: computer
+  accessories:
+    name: accessories
+  other:
+    name: other

@@ -1,0 +1,7 @@
+UserCategory:
+  user:
+    name: user
+  manager:
+    name: Manager
+  administrator:
+    name: Administrator
